@@ -19,7 +19,9 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleContinueShopping = (e) => {
     e.preventDefault();
-    onContinueShopping();
+    if (onContinueShopping) {
+        onContinueShopping(e); // Call the function passed from ProductList
+        }
   };
 
 
